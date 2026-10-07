@@ -2,9 +2,9 @@
 
 This is the interface between the groups. **Group 1 delivers** files in this layout
 (their task 7 turns the simulator recordings into it). **Group 2 owns the contract**
-and the validator (task 6): `python -m claimcheck.validate file.vbo`. A recorder is
+and the validator (task 7): `python -m claimcheck.validate file.vbo`. A recorder is
 done when its files pass the validator and the checker reads them.
-**It is a draft: task 6 agrees changes with Group 1, by 13 November.**
+**It is a draft: task 7 agrees changes with Group 1, by 13 November.**
 
 ## File layout
 
@@ -40,7 +40,7 @@ Quirks the reader handles (and the generator reproduces):
 A missing needed channel does not crash the check: the answer becomes "Can't tell
 yet" and says which channel is missing.
 
-## To agree between the groups (task 6, with Group 1's tasks 5 and 7)
+## To agree between the groups (task 7, with Group 1's tasks 5 and 7)
 
 - the channels the simulator can really supply, and their units
 - **timestamps**: keep the source time and the receive time; time must be

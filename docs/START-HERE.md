@@ -14,15 +14,15 @@ proposed scenarios for the benchmark. No task needs hardware.
 
 ## Squads
 
-Two squads of two. Each squad names a lead, who chairs the weekly meeting and makes sure the weekly note is written.
-The hours per person are in TASKS.md.
+Two squads, three and two students. Each squad names a lead, who chairs the weekly meeting and makes sure the weekly note
+is written. The hours per person are in TASKS.md; the labels there (Master 1 and so on) are agreed in the first meeting.
 
 | squad | members | focus |
 |---|---|---|
-| 1: Benchmark | Master 1 (lead), Master 2 | scenarios, test runner and measures, threshold calibration, noise and lap-count tests |
-| 2: Claims and interface | Master 3 (lead), Master 4 | interface and validator, claim reading, sampling-rate, GPS and timing tests, fidelity and transfer |
+| 1: Benchmark squad | Master 1 (lead), Bachelor 1, Bachelor 2 | scenarios, test runner and measures, realistic fake data, noise and lap-count tests, threshold calibration |
+| 2: Claims squad | Master 2 (lead), Master 3 | interface and validator, claim reading, sampling-rate, GPS and timing tests, fidelity and transfer |
 
-Task 4 (break the data) and task 8 (fidelity and transfer) need both squads.
+Tasks 4 (break the data), 5 (calibrate), 8 (claim reading) and 9 (fidelity and transfer) need both squads.
 
 ## Thursday to Friday
 
@@ -39,8 +39,8 @@ Task 4 (break the data) and task 8 (fidelity and transfer) need both squads.
 
 8. Each person adds three scenario ideas for task 2 as a comment on the "Scenarios"
    issue (what mistake, which corner, which claim, what the right answer is).
-9. Squad 2: list the three realism effects (tyre wear, traffic, driver variability)
-   and what each should do to a lap, in plain words. Do not code yet; task 8 uses them.
+9. Squad 1: list the three realism effects (tyre wear, traffic, driver variability)
+   and what each should do to a lap, in plain words. Do not code yet; task 6 builds them.
 10. Squad 2: read [LAP-FORMAT.md](LAP-FORMAT.md) and write down five questions for
     Group 1 about what their simulator can really supply.
 
