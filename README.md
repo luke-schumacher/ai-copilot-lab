@@ -44,6 +44,7 @@ The two groups meet at the **lap-file format** (`docs/LAP-FORMAT.md`).
   aside and not used for tuning, so that you can test honestly.
 - **Fidelity:** how closely a test environment behaves like the real thing, expressed as a number.
 - **Transfer:** whether a result found on fake data still holds on simulator data.
+- **Interface (German: Schnittstelle):** the place where one part hands data to the next. The lap-file layout is the interface between the two groups.
 - **Validator:** a program that checks whether a lap file follows the agreed layout.
 - **Fork, branch, pull request:** your own copy of a repository on GitHub; a line of work inside it; a
   request to merge that work back. See `docs/WORKFLOW.md`.
@@ -94,6 +95,11 @@ answered "right" every time. Finding out why is your first real result.
 **The validator.** `uv run python -m claimcheck.validate out/AA.vbo` checks a lap file against the layout.
 It is a skeleton: task 7 completes it.
 
+**Tests for the interface and the reporting.** The code is already here: `tests/test_validate.py` tests the lap-file
+interface, `tests/test_web.py` and `claimcheck/check/log.py` cover the reporting (the page and the log). Run them
+with `uv run pytest tests/test_validate.py tests/test_web.py`, read them, and extend them in task 7. Group 1 builds a
+dashboard that pulls data through this interface and evaluates it with the checker; it is what they present at the end.
+
 ## 5. How the code is organised
 
 ```
@@ -142,7 +148,7 @@ The full list, with hours, squads and what each task needs, is in **`docs/TASKS.
 4. Break the data: noise, fewer laps, lower rate, GPS error, timing faults; see where it fails.
 5. Calibrate the thresholds: tune on one set of scenarios, test on another.
 6. More realistic fake data: tyre wear, traffic, driver variability.
-7. Interface and validator: agree the lap file format with Group 1 and check their files.
+7. Interface and validator: agree the lap file format with Group 1, check their files, and test the interface and the reporting.
 8. Claim reading: compare the rule parser with AI models on 100 claims.
 9. Fidelity and transfer: compare fake and simulator sessions; rerun the benchmark on both.
 10. Meetings, report and final talk.
