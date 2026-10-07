@@ -4,7 +4,7 @@
 
 ## Type
 
-- [ ] Task pull request inside our fork (task id: ): a teammate reviews it
+- [ ] Task pull request inside our fork (task number: ): a teammate reviews it
 - [ ] Weekly pull request to Luke (contains `notes/week-NN.md`)
 
 ## Checks

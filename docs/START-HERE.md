@@ -14,15 +14,14 @@ proposed scenarios for the benchmark. No task needs hardware.
 
 ## Squads
 
-Each Master leads a squad of three. The squads share tasks; each task has a named
-lead (see TASKS.md).
+Each Master leads a squad of three. The squads share tasks; each task has a named lead (see TASKS.md).
 
 | squad | members | focus |
 |---|---|---|
-| A: Benchmark | M1 (lead), B1, B2 | scenarios, harness, metrics, calibration, noise and lap-count sweeps |
-| B: Realism and transfer | M2 (lead), B3, B4 | generator realism, fidelity metric, interface contract and validator, sampling-rate and GPS sweeps, timing faults |
+| 1: Benchmark | Master 1 (lead), Bachelor 1, Bachelor 2 | scenarios, test runner and measures, threshold calibration, noise and lap-count tests, claim reading |
+| 2: Realism and transfer | Master 2 (lead), Bachelor 3, Bachelor 4 | realistic generator, interface and validator, sampling-rate, GPS and timing tests, fidelity and transfer |
 
-T8 (interface contract and validator) belongs to squad B. T10 (transfer) needs both squads.
+Task 7 (interface and validator) belongs to squad 2. Task 9 (fidelity and transfer) needs both squads.
 
 ## Thursday to Friday
 
@@ -37,11 +36,11 @@ T8 (interface contract and validator) belongs to squad B. T10 (transfer) needs b
 
 ## By the first weekly meeting
 
-8. Each person adds three scenario ideas for T1 as a comment on the "T1 scenarios"
+8. Each person adds three scenario ideas for task 2 as a comment on the "Scenarios"
    issue (what mistake, which corner, which claim, what the right answer is).
-9. Squad B: list the three realism effects (tyre wear, traffic, driver variability)
+9. Squad 2: list the three realism effects (tyre wear, traffic, driver variability)
    and what each should do to a lap, in plain words. Do not code yet.
-10. Squad B: read [LAP-FORMAT.md](LAP-FORMAT.md) and write down five questions for
+10. Squad 2: read [LAP-FORMAT.md](LAP-FORMAT.md) and write down five questions for
     Group 1 about what their simulator can really supply.
 
 ## How the weeks run

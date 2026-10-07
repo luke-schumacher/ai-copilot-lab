@@ -1,14 +1,14 @@
 """
-A minimal known-answer benchmark: the place to start for T1 and T2.
+A minimal known-answer benchmark: the place to start for tasks 2 and 3.
 
 Each `Scenario` plants a mistake in one synthetic driver (BB), types a claim, and
 says which answer is correct. `run` generates two sessions, asks the checker, and
 returns the stamp it gave. `main` runs every scenario over several seeds and prints
 how often the checker was right, wrong, or said "Can't tell yet".
 
-This is deliberately small. T1 grows the scenario list (and moves it out of the
-code into a file), T2 makes the run reproducible, parallel and tested in CI,
-T3 replaces the counting here with proper metrics and intervals.
+This is deliberately small. Task 2 grows the scenario list (and moves it out of the
+code into a file); task 3 makes the run reproducible, parallel and tested in CI, and
+replaces the counting here with proper measures and intervals.
 
     python -m claimcheck.bench.starter            # 10 seeds
     python -m claimcheck.bench.starter 30         # 30 seeds

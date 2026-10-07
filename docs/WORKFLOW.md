@@ -20,7 +20,7 @@ Everyone clones the **fork**. Your day-to-day work happens there, without me.
 
 ## 2. Day to day: pull requests inside your fork
 
-- One branch per task, named `t5-calibration` or `s5-ros2-bridge`.
+- One branch per task, named `calibrate-thresholds` or `ros2-bridge`.
 - A teammate reviews, tests must be green, then you merge into your fork's `main`.
 
 ## 3. Every Friday: the weekly pull request to Luke

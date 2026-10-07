@@ -36,8 +36,8 @@ Try the claim above, then a wrong one ("BB brakes early in T1").
 | `claimcheck.check` | the claim check: laps, distance axis, corners, per-lap metrics, three stamps |
 | `claimcheck.web` | the local page |
 | `claimcheck.car` | generic car constants |
-| `claimcheck.bench.starter` | a minimal known-answer benchmark: where T1 and T2 start |
-| `claimcheck.validate` | a skeleton lap-file validator: where T8 starts |
+| `claimcheck.bench.starter` | a minimal known-answer benchmark: where tasks 2 and 3 start |
+| `claimcheck.validate` | a skeleton lap-file validator: where task 7 starts |
 | `tests/` | known-answer tests; read them first |
 
 **Start here: [docs/START-HERE.md](docs/START-HERE.md)** (your first week). Then
@@ -55,7 +55,7 @@ before you do anything else.
 ## How we work
 
 - `main` here is protected and changes only through your weekly pull request to Luke. Day to
-  day you work in your group's fork: one branch per task (`t5-calibration`), a teammate reviews,
+  day you work in your group's fork: one branch per task (`calibrate-thresholds`), a teammate reviews,
   tests are green.
 - **Done** means: merged by a reviewed pull request; tests pass and one command
   reproduces the result; the README or a docstring says how to run it; the

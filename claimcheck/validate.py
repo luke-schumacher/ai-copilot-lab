@@ -1,16 +1,16 @@
 """
-Does this file honour the lap format? A skeleton for T8.
+Does this file honour the lap format? A skeleton for task 7.
 
     python -m claimcheck.validate session.vbo
 
 It reports `Issue`s; an `error` means the checker cannot use the file or would give
 wrong answers, a `warning` means it can but you should look. Exit code 1 if there is
-any error. This is the contract Group 1's recorder has to pass, so T8 extends it as
+any error. This is the contract Group 1's recorder has to pass, so task 7 extends it as
 the contract in docs/LAP-FORMAT.md is agreed.
 
 Done here: required channels present, time strictly increasing, a start/finish gate
 present, the sampling rate stated and steady.
-TODO (T8): units per channel, plausible value ranges, lap count, duplicate and
+TODO (task 7): units per channel, plausible value ranges, lap count, duplicate and
 out-of-order rows, timestamps that carry both source time and receive time.
 """
 from __future__ import annotations
