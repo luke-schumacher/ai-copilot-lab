@@ -1,6 +1,6 @@
 # AI Copilot for Racesimulation: the claim checker lab (Group 2)
 
-This is the repository for **Group 2** of the student project, winter semester 2026/27, FH Aachen.
+This is the repository for **Group 2**, the four Master students, of the student project, winter semester 2026/27, FH Aachen.
 It runs on a normal laptop, needs no network and contains no real racing data.
 
 If you read only one thing: **Group 2 finds out how often the claim checker is right, and what makes it
@@ -20,8 +20,8 @@ What nobody knows yet is **how often it is right**, and where it starts to fail 
 That is your job. To do it you need data where the right answer is known, so this repository contains a
 **generator** that writes fake logger files with mistakes planted on purpose.
 
-Group 1 works in a second repository (`ai-copilot-sim`). They turn a racing-simulator rig into a second
-source of data. At the end you test whether what you found on fake data also holds on their simulator data.
+Group 1, the eight Bachelor students, works in a second repository (`ai-copilot-sim`, https://git.fh-aachen.de/ls9392e/ai-copilot-sim). They turn a
+racing-simulator rig into a second source of data. At the end you test whether what you found on fake data also holds on their simulator data.
 The two groups meet at the **lap-file format** (`docs/LAP-FORMAT.md`).
 
 ## 2. Terms used in this repository
@@ -46,17 +46,17 @@ The two groups meet at the **lap-file format** (`docs/LAP-FORMAT.md`).
 - **Transfer:** whether a result found on fake data still holds on simulator data.
 - **Interface (German: Schnittstelle):** the place where one part hands data to the next. The lap-file layout is the interface between the two groups.
 - **Validator:** a program that checks whether a lap file follows the agreed layout.
-- **Fork, branch, pull request:** your own copy of a repository on GitHub; a line of work inside it; a
-  request to merge that work back. See `docs/WORKFLOW.md`.
+- **Fork, branch, merge request:** your own copy of a repository on GitLab; a line of work inside it; a
+  request to merge that work back (GitHub calls it a pull request). See `docs/WORKFLOW.md`.
 
 ## 3. Set up (once, needs internet)
 
 You need **git** and **Python 3.10 or newer**. This README uses **uv**, a fast tool that creates the Python
 environment and installs the packages; plain `python -m venv` and `pip` work too.
 
-1. One person per group **forks** this repository on GitHub (the Fork button) and adds the other group
-   members as collaborators on the fork (Settings, Collaborators). The repository is public, so nobody needs
-   an invitation from Luke.
+1. One person per group **forks** this repository on the FH Aachen GitLab (https://git.fh-aachen.de/ls9392e/ai-copilot-lab, the Fork
+   button) and invites the other group members to the fork (Manage, Members, role Developer). Sign in with
+   your FH account; every signed-in student can see the repository, so nobody needs an invitation from Luke.
 2. Everyone clones the fork and opens a terminal in the folder:
 
 ```bash
@@ -93,18 +93,18 @@ random seeds and prints how often the checker was right, wrong, or said "can't t
 answered "right" every time. Finding out why is your first real result.
 
 **The validator.** `uv run python -m claimcheck.validate out/AA.vbo` checks a lap file against the layout.
-It is a skeleton: task 7 completes it.
+It is a skeleton: task 6 completes it.
 
 **Tests for the interface and the reporting.** The code is already here: `tests/test_validate.py` tests the lap-file
 interface, `tests/test_web.py` and `claimcheck/check/log.py` cover the reporting (the page and the log). Run them
-with `uv run pytest tests/test_validate.py tests/test_web.py`, read them, and extend them in task 7. Group 1 builds a
+with `uv run pytest tests/test_validate.py tests/test_web.py`, read them, and extend them in task 6. Group 1 builds a
 dashboard that pulls data through this interface and evaluates it with the checker; it is what they present at the end.
 
 ## 5. How the code is organised
 
 ```
 claimcheck/
-  synth.py            the generator: fake sessions with planted mistakes (task 6 extends it)
+  synth.py            the generator: fake sessions with planted mistakes (task 8 extends it)
   ingest/vbo.py       reads a lap file (.vbo) into Python
   check/
     session.py        cuts a file into laps and names the drivers
@@ -113,12 +113,12 @@ claimcheck/
     stats.py          the decision: Supported, Contradicted or Can't tell yet
     thresholds.py     every number that decides an answer, in one place (task 5 tunes them)
     claim.py          reads a sentence with simple rules, English and German
-    translate.py      the optional AI-model reader (task 8 compares it with the rules)
+    translate.py      the optional AI-model reader (task 7 compares it with the rules)
     verdict.py        puts the answer and the numbers behind it into words
     log.py            appends every check to a log file
   web/                the local page
   bench/starter.py    the starter benchmark (tasks 2 and 3 start here)
-  validate.py         the lap-file validator skeleton (task 7 starts here)
+  validate.py         the lap-file validator skeleton (task 6 starts here)
   car.py              generic car constants
 tests/                known-answer tests: read them first, they show what "correct" means
 docs/                 how it works, the lap format, tasks, workflow, data rule
@@ -147,11 +147,10 @@ The full list, with hours, squads and what each task needs, is in **`docs/TASKS.
 3. Test runner and measures: run all scenarios over many seeds and count the answers.
 4. Break the data: noise, fewer laps, lower rate, GPS error, timing faults; see where it fails.
 5. Calibrate the thresholds: tune on one set of scenarios, test on another.
-6. More realistic fake data: tyre wear, traffic, driver variability.
-7. Interface and validator: agree the lap file format with Group 1, check their files, and test the interface and the reporting.
-8. Claim reading: compare the rule parser with AI models on 100 claims.
-9. Fidelity and transfer: compare fake and simulator sessions; rerun the benchmark on both.
-10. Meetings, report and final talk.
+6. Interface and validator: agree the lap file format with Group 1, check their files, and test the interface and the reporting.
+7. Claim reading: compare the rule parser with AI models on 100 claims.
+8. Fidelity and transfer: compare fake and simulator sessions, make the fake data more realistic where they differ (tyre wear, traffic, driver variability), and rerun the benchmark on both.
+9. Meetings, report and final talk.
 
 Start here: **`docs/START-HERE.md`** (your first week).
 
@@ -159,9 +158,9 @@ Start here: **`docs/START-HERE.md`** (your first week).
 
 - Your group works in its **fork**: one branch per task (`calibrate-thresholds`), a teammate reviews,
   tests are green, then merge into the fork's `main`.
-- You meet **at least once a week** without Luke, open **one pull request to Luke every Friday**, and have
+- You meet **at least once a week** without Luke, open **one merge request to Luke every Friday**, and have
   an **online call every second week**. Details: `docs/WORKFLOW.md`.
-- **Done** means: merged by a reviewed pull request, tests pass, one command reproduces the result, a README
+- **Done** means: merged by a reviewed merge request, tests pass, one command reproduces the result, a README
   or docstring says how to run it, and the task's "done when" is met with the numbers in the repository.
 
 ## 9. The data rule
@@ -172,7 +171,7 @@ Work only with data you create yourselves. Read `docs/DATA-RULE.md` before you d
 
 The checker can use an AI model to read the sentence. It is optional; the rule parser works without it.
 Put `ANTHROPIC_API_KEY=...` in a `.env` file (it is git-ignored) and run `uv pip install -e ".[llm]"`.
-You do not need it for any task except task 8, where the local models from Group 1 are the main candidates.
+You do not need it for any task except task 7, where the local models from Group 1 are the main candidates.
 
 ## 11. If something goes wrong
 

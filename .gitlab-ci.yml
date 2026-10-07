@@ -1,0 +1,8 @@
+# Runs the tests on every push and merge request (FH Aachen GitLab).
+image: python:3.12-slim
+
+test:
+  script:
+    - pip install --quiet uv
+    - uv venv && uv pip install -e ".[dev]"
+    - uv run pytest -q
