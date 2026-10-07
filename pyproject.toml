@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claimcheck"
+version = "0.1.0"
+description = "Claim checker and synthetic session generator for the AI Copilot student project."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+# Optional: a language model reads the sentence. Not needed; the rule parser works without it.
+llm = ["anthropic>=1.0"]
+
+[project.scripts]
+claimcheck = "claimcheck.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["claimcheck*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
