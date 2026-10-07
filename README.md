@@ -56,7 +56,7 @@ environment and installs the packages; plain `python -m venv` and `pip` work too
 
 1. One person per group **forks** this repository on the FH Aachen GitLab (https://git.fh-aachen.de/ls9392e/ai-copilot-lab, the Fork
    button) and invites the other group members to the fork (Manage, Members, role Developer). Sign in with
-   your FH account. Luke gives you read access; if you do not see the repository, click Request access.
+   your FH account, then click Request access on the project page; Luke approves it.
 2. Everyone clones the fork and opens a terminal in the folder:
 
 ```bash

@@ -5,9 +5,9 @@ Three rhythms. You run the first two yourselves; I (Luke) join the third.
 ## Where the repositories are
 
 Both repositories are on the FH Aachen GitLab, https://git.fh-aachen.de. Sign in with your FH account.
-I give every student read access (role Reporter) to both repositories. If you do not see them, click
-**Request access** on the project page and I approve it. Reporter is enough to read and to fork; your work
-reaches the original only through merge requests from your fork.
+Open your repository and click **Request access**; I approve it (role Reporter). Group 1 needs both repositories (the
+mock stream and the validator come from the lab repository), Group 2 needs the lab repository. Reporter is enough
+to read and to fork; your work reaches the original only through merge requests from your fork.
 
 - Group 1 (simulator rig): https://git.fh-aachen.de/ls9392e/ai-copilot-sim
 - Group 2 (claim checker): https://git.fh-aachen.de/ls9392e/ai-copilot-lab
