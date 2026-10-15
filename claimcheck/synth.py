@@ -274,7 +274,8 @@ def write_session(path: str | Path, style: Style, laps: int = 6, hz: float = 10.
             f"{along[i]:+.6E} {ay_g[i]:+.6E} +0.000000E+00 +0.000000E+00")
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text("\r\n".join(lines) + "\r\n", encoding="utf-8")
+    # newline="": the text already carries the CRLFs, and Windows would add a CR to each.
+    path.write_text("\r\n".join(lines) + "\r\n", encoding="utf-8", newline="")
     return path
 
 
