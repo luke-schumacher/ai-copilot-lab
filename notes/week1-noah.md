@@ -19,4 +19,4 @@ This is due the tolerance kicking in and the logic then saying that the actual v
 - Another point could be that at lower speeds a 5m diffrence has a much greater impact on the actual result (tolerance) than 5m at a much higher speed because you travel these 5m way faster.
 
 ## Hours this week (per person, rough)
-- aprox. 8
+- aprox. 9 
