@@ -22,6 +22,7 @@ That is your job. To do it you need data where the right answer is known, so thi
 
 Group 1, seven students (one Master and six Bachelors), works in a second repository (`ai-copilot-sim`, https://git.fh-aachen.de/ls9392e/ai-copilot-sim). They turn a
 racing-simulator rig into a second source of data. At the end you test whether what you found on fake data also holds on their simulator data.
+To record Assetto Corsa yourselves, use their recorder: `docs/RECORDER.md` in `ai-copilot-sim`. It writes the same files as the 27 October drives.
 The two groups meet at the **lap-file format** (`docs/LAP-FORMAT.md`).
 
 ## 2. Terms used in this repository
